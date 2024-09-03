@@ -1,0 +1,494 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.home {
+    width: 100%;
+    min-height: 100vh;
+    background: url(../img/background.jpg), no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Navbar */
+
+nav {
+    width: 100%;
+    padding: 1.5rem 7.5rem;
+    display: grid;
+    grid-template: 1fr / repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 3rem;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-family: 'Lobster', cursive;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    justify-self: left;
+    position: relative;
+    z-index: 3;
+}
+
+.page-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    justify-self: right;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0 1rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    font-weight: bold;
+}
+
+/* hamburger */
+
+.hamburger {
+    display: none;
+    width: 25px;
+    height: 20px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background: #fff;
+}
+
+.hamburger-wrap {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.burger-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 50%;
+}
+
+.burger-link {
+    color: #000;
+}
+
+/* hamburger open/close */
+.hamburger.active .line {
+    background: #000;
+}
+
+.logo.active {
+    color: #000;
+}
+
+.hamburger-wrap.active {
+    left: 0;
+}
+
+    /* home content */
+
+    .home-content {
+        width: 50%;
+        min-height: 25vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+    }
+
+    .home-quote {
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .home-quote span {
+        color: teal;
+    }
+
+    .btn-wrapper {
+        width: 50%;
+        height: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .btn-wrapper a {
+        text-decoration: none;
+        color: #fff;
+        padding: 0.5rem 2.5rem;
+        margin: 0 1rem;
+        border: 2px solid #fff;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        z-index: 1;
+    }
+
+    .btn-wrapper a:hover {
+        border-color: teal;
+    }
+
+
+        /* about page */
+        #about {
+            width: 80%;
+            min-height: 110vh;
+            margin: 5vh auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .about-content {
+            width: 45%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .plan {
+            margin-top: 5rem;
+        }
+
+        .our-goal h2,
+        .plan h2 {
+            margin-bottom: 1rem;
+            text-transform: capitalize;
+        }
+
+        .about-img {
+            width: 47.5%;
+            height: 75vh;
+            background: url(../img/about-img.jpg), no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .about-img::after {
+            content: '';
+            position: absolute;
+            top: 35%;
+            left: 35%;
+            z-index: -1;
+            width: 80%;
+            height: 80%;
+            background: #e9e9e9;
+        }
+
+
+    /* quote section */
+    .quote {
+        width: 100%;
+        height: 50vh;
+        background: url(../img/quote.jpg), no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .quote::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    .quote h2 {
+        position: relative;
+        z-index: 1;
+        font-size: 5rem;
+        color: #fff;
+        text-align: center;
+    }
+
+
+            /* services section */
+            #services {
+                width: 100%;
+                min-height: 125vh;
+                background: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .services-wrapper {
+                width: 80%;
+                min-height: 75vh;
+                display: grid;
+                grid-template: 1fr / repeat(3, 1fr);
+                column-gap: 3rem;
+            }
+
+            .service {
+                width: 100%;
+                height: 100%;
+                background: #fff;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                padding: 0 1rem 1rem 1rem;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-direction: column;
+            }
+
+            .training-img {
+                background: url(../img/training.jpg), no-repeat;
+            }
+
+            .support-img {
+                background: url(../img/support.jpg), no-repeat;
+            }
+
+            .finance-img {
+                background: url(../img/finance.jpg), no-repeat;
+            }
+
+            .service-img {
+                position: relative;
+                width: 90%;
+                height: 50%;
+                background-position: center;
+                background-size: cover;
+            }
+
+            .service-img::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(50, 50, 93, 0.25);
+            }
+
+
+    /* Responsive */ 
+
+    @media only screen and (max-width: 768px) {
+        /* navbar */
+        nav {
+            grid-template: repeat(2, 1fr) / 1fr;
+            padding-left: 0;
+            padding-right: 0;
+            gap: 1.5rem;
+        }
+
+        .logo,
+        .page-nav {
+            justify-self: center;
+        }
+
+            /* homepage */
+            .home-quote {
+                margin: 3rem 0 1.5rem 0;
+            }
+
+        
+        /* about page */
+        .about-content {
+            width: 100%;
+            text-align: center;
+        }
+
+        .about-img {
+            display: none;
+        }
+
+
+            /* quote section */
+            .quote h2 {
+                font-size: 3.5rem;
+            }
+
+
+        /* service section */
+        #services {
+            min-height: 100vh;
+        }
+
+        .services-wrapper {
+            width: 90%;
+            min-height: 60vh;
+            column-gap: 2rem;
+        }
+
+        .service h2 {
+            font-size: 1rem;
+        }
+
+        .service p {
+            font-size: 0.75rem;
+        }
+
+    }
+
+    @media only screen and (max-width: 600px) {
+        /* quote section */
+        .quote h2 {
+            font-size: 2.75rem;
+        }
+
+
+            /* services section */
+            #services {
+                padding: 2rem 0;
+            }
+
+            .services-wrapper {
+                width: 50%;
+                grid-template: repeat(3, 1fr) / 1fr;
+                row-gap: 3rem;
+            }
+
+            .service {
+                min-height: 75vh;
+            }
+    }
+
+    @media only screen and (max-width: 425px) {
+        #about {
+            width: 70%;
+        }
+
+        .our-goal h2,
+        .plan h2 {
+            font-size: 1.25rem;
+        }
+
+        .our-goal p,
+        .plan p {
+            font-size: 1rem;
+        }
+
+
+            /* services section */
+            .services-wrapper {
+                width: 75%;
+            }
+
+            .service {
+                min-height: 50vh;
+            }
+    }
+
+    @media only screen and (max-width: 376px) {
+        /* navbar */
+        nav {
+            gap: 1.5rem;
+            grid-template: 1fr / repeat(2, 1fr);
+            position: fixed;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+        }
+
+        .nav-link {
+            font-size: 1rem;
+        }
+
+        .page-nav {
+            display: none;
+        }
+
+            /* hamburger */
+            .hamburger {
+                display: flex;
+            }
+        
+        /* homepage */
+        .home-quote {
+            line-height: 50px;
+            font-size: 1.25rem;
+        }
+
+        .btn-wrapper {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .btn-wrapper a {
+            width: 100%;
+            margin-top: 1.5rem;
+            font-size: 0.75rem;
+        }
+    }
+
+    @media only screen and (max-width: 350px) {
+        
+    }
+
+    @media only screen and (min-height: 850px) {
+        /* homepage */
+        .home-content {
+            margin-bottom: 50%;
+        }
+    }
